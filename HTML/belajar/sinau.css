@@ -1,4 +1,10 @@
 p{
-    color: green;
-    text-align : justify
+    font-family: Arial, Helvetica, sans-serif;
+    text-align : justify;
+    font-size: 16px;
+}
+
+.par1 {
+    background-color: rgb(238, 104, 104);
+    margin: 15px;
 }
