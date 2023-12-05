@@ -1,14 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>File Belajar</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu Halaman</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: #333;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #444;
+      overflow: hidden;
+    }
+
+    nav a {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    .content {
+      padding: 20px;
+    }
+  </style>
 </head>
 <body>
-    <h2 class="judul">Selamat Pagi</h2>
 
-    <p class="psatu">semoga kamu baik-baik saja</p>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime ut iure eius sapiente magnam, sed suscipit porro esse repellat ea excepturi. Itaque excepturi officiis deserunt vel molestiae nam enim aliquid!</p>
+  <header>
+    <h1>Halaman Satu</h1>
+  </header>
+
+  <nav>
+    <a href="sinau2.html">Home</a>
+    <a href="#halaman">Halaman</a>
+  </nav>
+
+  <div class="content">
+    <h2>Ini Adalah Halaman Pertama</h2>
+    <div id="halamanContent" style="display: none;">
+      <p>Pilih halaman:</p>
+      <ul>
+        <li><a href="sinau2.html">Menu Awal</a></li>
+        <li><a href="#halaman2">Halaman 2</a></li>
+        <li><a href="#halaman3">Halaman 3</a></li>
+        <li><a href="#halaman4">Halaman 4</a></li>
+        <li><a href="#halaman5">Halaman 5</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    document.querySelector('a[href="#halaman"]').addEventListener('click', function () {
+      var halamanContent = document.getElementById('halamanContent');
+      if (halamanContent.style.display === 'none') {
+        halamanContent.style.display = 'block';
+      } else {
+        halamanContent.style.display = 'none';
+      }
+    });
+  </script>
+
 </body>
 </html>
